@@ -38,7 +38,7 @@ RUN git config --global user.name "sadrayan"
 RUN /home/okapi/scripts/init.sh
 
 # initialize global variables
-RUN source /home/okapi/environmentSettings.bshrc
+#RUN source /home/okapi/environmentSettings.bshrc
 
 RUN cd /home/okapi_ws/
 
