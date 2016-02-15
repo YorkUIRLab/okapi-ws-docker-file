@@ -30,13 +30,13 @@ RUN cp /usr/lib/jvm/java-7-openjdk-amd64/include/jni_md.h /usr/lib/gcc/x86_64-li
 
 RUN mkdir -p /home/okapi
 RUN git clone https://github.com/YorkUIRLab/okapi.git /home/okapi
-RUN git clone https://github.com/YorkUIRLab/okapi-web-service.git /home/okapi-wed-service
+RUN git clone https://github.com/YorkUIRLab/okapi-web-service.git /home/okapi-web-service
 RUN git config --global user.email "sadrayan@gmail.com"
 RUN git config --global user.name "sadrayan"
 
 # initialize okapi
 RUN /home/okapi/scripts/init.sh
 
-RUN /home/okapi-wed-service/init.sh
+RUN /home/okapi-web-service/init.sh
 
 WORKDIR /home/okapi
