@@ -30,24 +30,13 @@ RUN cp /usr/lib/jvm/java-7-openjdk-amd64/include/jni_md.h /usr/lib/gcc/x86_64-li
 
 RUN mkdir -p /home/okapi
 RUN git clone https://github.com/YorkUIRLab/okapi.git /home/okapi
-RUN git clone https://github.com/YorkUIRLab/okapi-web-service.git /home/okapi_ws
+RUN git clone https://github.com/YorkUIRLab/okapi-web-service.git /home/okapi-wed-service
 RUN git config --global user.email "sadrayan@gmail.com"
 RUN git config --global user.name "sadrayan"
 
 # initialize okapi
 RUN /home/okapi/scripts/init.sh
 
-# initialize global variables
-#RUN source /home/okapi/environmentSettings.bshrc
-
-#RUN cd /home/okapi_ws/
-
-# Package the Web Service Project
-#RUN cd /home/okapi_ws/ && mvn install
-
-# Run Okapi WS - avaiable at localhost:8080
-#RUN java -jar target/okapi-web-service-0.1.0.jar
-
-
+RUN /home/okapi-wed-service/init.sh
 
 WORKDIR /home/okapi
