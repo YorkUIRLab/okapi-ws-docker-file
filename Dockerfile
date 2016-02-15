@@ -43,10 +43,10 @@ RUN /home/okapi/scripts/init.sh
 #RUN cd /home/okapi_ws/
 
 # Package the Web Service Project
-RUN cd /home/okapi_ws/ && mvn install
+#RUN cd /home/okapi_ws/ && mvn install
 
 # Run Okapi WS - avaiable at localhost:8080
-RUN java -jar target/okapi-web-service-0.1.0.jar
+#RUN java -jar target/okapi-web-service-0.1.0.jar
 
 
 
