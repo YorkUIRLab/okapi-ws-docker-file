@@ -24,8 +24,8 @@ RUN apt-get install -y \
 	vim
 
 # jdk 6 and gcc 4.8
-RUN cp /usr/lib/jvm/java-7-openjdk-amd64/include/jni.h /usr/lib/gcc/i686-linux-gnu/5.2.1/include
-RUN cp /usr/lib/jvm/java-7-openjdk-amd64/include/jni_md.h /usr/lib/gcc/i686-linux-gnu/5.2.1/include
+RUN cp /usr/lib/jvm/java-7-openjdk-amd64/include/jni.h /usr/lib/gcc/x86_64-linux-gnu/5.2.1/include
+RUN cp /usr/lib/jvm/java-7-openjdk-amd64/include/jni_md.h /usr/lib/gcc/x86_64-linux-gnu/5.2.1/include
 
 RUN mkdir -p /home/okapi
 RUN git clone https://github.com/YorkUIRLab/okapi.git /home/okapi
