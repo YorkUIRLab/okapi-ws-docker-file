@@ -37,6 +37,6 @@ RUN git config --global user.name "sadrayan"
 # initialize okapi
 RUN /home/okapi/scripts/init.sh
 
-#RUN /home/okapi-web-service/init.sh
+RUN /home/okapi-web-service/init.sh
 
 WORKDIR /home/okapi
