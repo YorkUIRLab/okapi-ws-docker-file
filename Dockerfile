@@ -42,6 +42,7 @@ RUN cp /home/okapi/environmentSettings.bshrc ~/.bashrc
 RUN /bin/bash -c 'source ~/.bashrc ; echo $OKAPI_BINDIR'
 
 # run Okapi WS
+ENTRYPOINT ["java", "-jar", "/home/okapi-web-service/output/okapi-web-service-0.1.0.jar"]
 #RUN /home/okapi-web-service/init.sh
 
 WORKDIR /home/okapi
