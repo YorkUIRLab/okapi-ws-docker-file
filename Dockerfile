@@ -24,6 +24,7 @@ RUN apt-get install -y \
 	openjdk-7-jdk:i386 \
 	git \
 	maven \
+	curl \
 	vim
 
 # jdk 7 and gcc 4.8
