@@ -24,7 +24,7 @@ RUN apt-get install -y \
 	maven \
 	vim
 
-# jdk  and gcc 4.8
+# jdk 7 and gcc 4.8
 RUN cp /usr/lib/jvm/java-7-openjdk-i386/include/jni.h /usr/lib/gcc/x86_64-linux-gnu/4.8/include
 RUN cp /usr/lib/jvm/java-7-openjdk-i386/include/jni_md.h /usr/lib/gcc/x86_64-linux-gnu/4.8/include
 
@@ -38,7 +38,7 @@ RUN git config --global user.name "sadrayan"
 RUN /home/okapi/scripts/init.sh
 
 # Setup env variables
-COPY /home/okapi/environmentSettings.bshrc ~/.bashrc
+RUN cp /home/okapi/environmentSettings.bshrc ~/.bashrc
 RUN /bin/bash -c 'source ~/.bashrc ; echo $OKAPI_BINDIR'
 
 # run Okapi WS
