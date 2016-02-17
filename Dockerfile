@@ -39,7 +39,7 @@ RUN /home/okapi/scripts/init.sh
 
 # Setup env variables
 COPY /home/okapi/environmentSettings.bshrc ~/.bashrc
-RUN /bin/bash -c 'source ~/.bashrc ; echo $OKAPI_BINDIR
+RUN /bin/bash -c 'source ~/.bashrc ; echo $OKAPI_BINDIR'
 
 # run Okapi WS
 #RUN /home/okapi-web-service/init.sh
