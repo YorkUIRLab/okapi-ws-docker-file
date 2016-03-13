@@ -49,8 +49,8 @@ RUN /bin/bash -c 'source ~/.bashrc ; echo $OKAPI_BINDIR'
 
 
 VOLUME /tmp
-ADD /home/okapi-web-service/output/okapi-web-service-0.1.0.jar app.jar
+RUN cp /home/okapi-web-service/output/okapi-web-service-0.1.0.jar app.jar
 RUN bash -c 'touch /app.jar'
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 
-WORKDIR /home/okapi
+#WORKDIR /home/okapi
