@@ -21,15 +21,16 @@ RUN apt-get install -y \
 	make \
 	bison \
 	flex \
-	openjdk-7-jdk:i386 \
+	openjdk-8-jdk:i386 \
 	git \
 	maven \
 	curl \
+	ant \
 	vim
 
-# jdk 7 and gcc 4.8
-RUN cp /usr/lib/jvm/java-7-openjdk-i386/include/jni.h /usr/lib/gcc/x86_64-linux-gnu/4.8/include
-RUN cp /usr/lib/jvm/java-7-openjdk-i386/include/jni_md.h /usr/lib/gcc/x86_64-linux-gnu/4.8/include
+# jdk 8 and gcc 5.3.1
+RUN cp /usr/lib/jvm/java-8-openjdk-i386/include/jni.h /usr/lib/gcc/x86_64-linux-gnu/5.3.1/include
+
 
 RUN mkdir -p /home/okapi
 RUN git clone https://github.com/YorkUIRLab/okapi.git /home/okapi
